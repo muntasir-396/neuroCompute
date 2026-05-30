@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, Square, Settings2, Plus, Zap } from 'lucide-react';
+import { Play, Square, Settings2, Plus, Zap, Trash2 } from 'lucide-react';
 import { Algorithm, GPUJob, JobType, UserTier } from '../types';
 import { generateJobId } from '../lib/jobGenerator';
 import { cn } from '../lib/utils';
@@ -13,6 +13,7 @@ export function Sidebar({
   setTickRate,
   onSubmitJob,
   onAddBulk,
+  onClear,
 }: {
   algorithm: Algorithm;
   setAlgorithm: (a: Algorithm) => void;
@@ -22,6 +23,7 @@ export function Sidebar({
   setTickRate: (r: number) => void;
   onSubmitJob: (job: GPUJob) => void;
   onAddBulk: () => void;
+  onClear: () => void;
 }) {
   const [jobName, setJobName] = useState('');
   const [jobType, setJobType] = useState<JobType>('Deep Learning Training');
@@ -177,6 +179,14 @@ export function Sidebar({
           >
             <Settings2 className="w-4 h-4"/>
             Generate Random Workload
+          </button>
+          
+          <button
+            onClick={onClear}
+            className="w-full bg-red-950/30 hover:bg-red-900/40 text-red-500 flex items-center justify-center gap-2 py-2 rounded-md text-sm font-medium transition-colors border border-red-900/30"
+          >
+            <Trash2 className="w-4 h-4"/>
+            Clear All Data
           </button>
       </div>
 

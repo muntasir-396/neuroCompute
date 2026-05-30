@@ -43,6 +43,11 @@ export default function App() {
     });
   };
 
+  const handleClear = () => {
+    setIsRunning(false);
+    setState(s => createInitialState(s.algorithm));
+  };
+
   return (
     <div className="flex h-screen bg-slate-950 text-slate-50 overflow-hidden font-sans">
       <Sidebar 
@@ -54,6 +59,7 @@ export default function App() {
         setTickRate={setTickRate}
         onSubmitJob={handleSubmitJob}
         onAddBulk={handleAddBulk}
+        onClear={handleClear}
       />
       
       <main className="flex-1 p-6 md:p-8 overflow-y-auto w-full">
