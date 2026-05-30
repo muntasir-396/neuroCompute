@@ -26,7 +26,7 @@
 </div>
 
 ---
-Link: https://neurocompute-244954813348.asia-southeast1.run.app
+Live Link: https://neurocompute-244954813348.asia-southeast1.run.app
 
 
 
