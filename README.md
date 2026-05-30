@@ -49,3 +49,8 @@ Block the queue: Submit several small Model Inference jobs (1-5 minutes).
 Observe FCFS: Note how the small jobs wait indefinitely.
 Switch to SRTF: Watch the system aggressively pause the massive job to let the small inference jobs finish instantly, reducing the overall average waiting time.
 Built with ❤️ to demonstrate the intersection of Operating Systems concepts and modern ML Infrastructure.
+
+<img width="1600" height="739" alt="image" src="https://github.com/user-attachments/assets/6d41c636-6bec-49dd-a411-257d8115d60f" />
+<img width="1600" height="730" alt="image" src="https://github.com/user-attachments/assets/e805cfa4-a9c1-4ca1-893a-00d841f5f39d" />
+
+
